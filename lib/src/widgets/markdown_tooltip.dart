@@ -105,20 +105,12 @@ class MarkdownTooltip extends StatelessWidget {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
 
-    // Use provided colors or fallback to theme colors
-    final bgColor = backgroundColor ??
-        (isDark
-            ? const Color(0xFF424242)
-            : // Dark mode background
-            const Color(0xFFF5F5F5) // Light mode background
-        );
+    // Use provided colors or fallback to theme colors.
 
-    final txtColor = textColor ??
-        (isDark
-            ? Colors.white
-            : // Dark mode text
-            Colors.black87 // Light mode text
-        );
+    final bgColor = backgroundColor ??
+        (isDark ? const Color(0xFF424242) : const Color(0xFFF5F5F5));
+
+    final txtColor = textColor ?? (isDark ? Colors.white : Colors.black87);
 
     return Tooltip(
       enableTapToDismiss: !includesLink(message),
