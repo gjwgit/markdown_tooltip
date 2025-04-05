@@ -67,6 +67,8 @@ class MarkdownTooltip extends StatelessWidget {
     required this.message,
     super.key,
     this.wait = const Duration(seconds: 1),
+    this.backgroundColor,
+    this.textColor,
   });
 
   /// A widget to be wrapped with this tooltip.
@@ -81,6 +83,14 @@ class MarkdownTooltip extends StatelessWidget {
 
   final Duration wait;
 
+  /// Optional background color for the tooltip. If not provided, uses theme colors.
+
+  final Color? backgroundColor;
+
+  /// Optional text color for the tooltip. If not provided, uses theme colors.
+
+  final Color? textColor;
+
   /// Test if the [message] contains a url.
 
   bool includesLink(String msg) {
@@ -92,6 +102,16 @@ class MarkdownTooltip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+
+    // Use provided colors or fallback to theme colors.
+
+    final bgColor = backgroundColor ??
+        (isDark ? const Color(0xFF424242) : const Color(0xFFF5F5F5));
+
+    final txtColor = textColor ?? (isDark ? Colors.white : Colors.black87);
+
     return Tooltip(
       enableTapToDismiss: !includesLink(message),
       richMessage: WidgetSpan(
@@ -113,10 +133,26 @@ class MarkdownTooltip extends StatelessWidget {
               final Uri url = Uri.parse(href ?? '');
               launchUrl(url);
             },
-
-            // style: const TextStyle(
-            //   fontSize: 18,
-            // ),
+            styleSheet: MarkdownStyleSheet(
+              p: TextStyle(
+                color: txtColor,
+                fontSize: 14,
+              ),
+              strong: TextStyle(
+                color: txtColor,
+                fontWeight: FontWeight.bold,
+                fontSize: 14,
+              ),
+              a: TextStyle(
+                color: theme.colorScheme.primary,
+                decoration: TextDecoration.underline,
+                fontSize: 14,
+              ),
+              listBullet: TextStyle(
+                color: txtColor,
+                fontSize: 14,
+              ),
+            ),
           ),
         ),
       ),
@@ -127,9 +163,14 @@ class MarkdownTooltip extends StatelessWidget {
       waitDuration: wait,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
-        color: const Color(0XFFDFE0FF), //Colors.amber,
-        // gradient:
-        //     const LinearGradient(colors: <Color>[Colors.amber, Colors.red]),
+        color: bgColor,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            blurRadius: 4,
+            offset: const Offset(0, 2),
+          ),
+        ],
       ),
       // textStyle: const TextStyle(
       //   fontSize: 18,
