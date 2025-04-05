@@ -1,16 +1,7 @@
-## 0.0.6
+## 0.1
 
-* Support linking to URL with a tap. If the tooltip message does not
-  contain a markdown link then a tap will close the tooltip.
-
-## 0.0.5
-
-* Add and simplify example
-
-## 0.0.3
-
-* Typo
-
-## 0.0.2
-
-* Initial release to https://pud.dev
++ Support dark mode [0.0.7 20250405 atangster]
++ Support linking to URL with tap and no URL close tooltip [0.0.6 20250405 gjw]
++ Add and simplify example [0.0.5 20250405 gjw]
++ Typo [0.0.3 20250405 gjw]
++ Initial release to https://pud.dev [0.0.3 20250405 gjw]
