@@ -83,3 +83,8 @@ are permitted to be loaded into Rattle. Markdown will make bold any
 text between `**` and `**`.
 
 ![](assets/images/screenshot_rattle_datset_filename_tooltip.png)
+
+Here [HealthPod](https://github.com/anusii/healthpod) demonstrates
+support for dark mode within an app.
+
+![](assets/images/screenshot_healthpod_dark_mode.png)
