@@ -1,6 +1,6 @@
 /// A tooltip supporting markdown with a popup delay to avoid clutter of tooltips.
 ///
-// Time-stamp: <Wednesday 2025-03-26 11:41:41 +1100 Graham Williams>
+// Time-stamp: <Thursday 2025-08-21 15:48:16 +1000 Graham Williams>
 ///
 /// Copyright (c) 2023-2024, Togaware Pty Ltd.
 ///
@@ -32,7 +32,7 @@ library;
 
 import 'package:flutter/material.dart';
 
-import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:gpt_markdown/gpt_markdown.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:markdown_tooltip/markdown_tooltip.dart';
@@ -120,39 +120,39 @@ class MarkdownTooltip extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(10),
           constraints: const BoxConstraints(maxWidth: 350),
-          child: MarkdownBody(
+          child: GptMarkdown(
             // Use the text tidying aspects of [wordWrap] so we can present this
             // message using triple quotes and formated with space before and
             // after, which looks a lot nicer in the code. Set the width high to
             // avoid embedded '\n'.
-            data: wordWrap(
+            wordWrap(
               message.isEmpty ? 'Tooltip Coming Soon.' : message,
               width: 1000,
             ),
-            onTapLink: (text, href, title) {
-              final Uri url = Uri.parse(href ?? '');
-              launchUrl(url);
-            },
-            styleSheet: MarkdownStyleSheet(
-              p: TextStyle(
-                color: txtColor,
-                fontSize: 14,
-              ),
-              strong: TextStyle(
-                color: txtColor,
-                fontWeight: FontWeight.bold,
-                fontSize: 14,
-              ),
-              a: TextStyle(
-                color: theme.colorScheme.primary,
-                decoration: TextDecoration.underline,
-                fontSize: 14,
-              ),
-              listBullet: TextStyle(
-                color: txtColor,
-                fontSize: 14,
-              ),
-            ),
+            // onTapLink: (text, href, title) {
+            //   final Uri url = Uri.parse(href ?? '');
+            //   launchUrl(url);
+            // },
+            // styleSheet: MarkdownStyleSheet(
+            //   p: TextStyle(
+            //     color: txtColor,
+            //     fontSize: 14,
+            //   ),
+            //   strong: TextStyle(
+            //     color: txtColor,
+            //     fontWeight: FontWeight.bold,
+            //     fontSize: 14,
+            //   ),
+            //   a: TextStyle(
+            //     color: theme.colorScheme.primary,
+            //     decoration: TextDecoration.underline,
+            //     fontSize: 14,
+            //   ),
+            //   listBullet: TextStyle(
+            //     color: txtColor,
+            //     fontSize: 14,
+            //   ),
+            // ),
           ),
         ),
       ),
