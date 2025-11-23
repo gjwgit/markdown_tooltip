@@ -32,7 +32,7 @@ Your `pubspec.yaml` will be updated to look like:
 ```yaml
 dependencies:
   ...
-  markdown_tooltip: ^0.0.7
+  markdown_tooltip: ^0.0.9
 ```
 
 ## Usage
