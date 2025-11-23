@@ -1,6 +1,6 @@
 /// A tooltip supporting markdown with a popup delay to avoid clutter of tooltips.
 ///
-// Time-stamp: <Sunday 2025-11-23 20:58:19 +1100 Graham Williams>
+// Time-stamp: <Monday 2025-11-24 08:26:14 +1100 Graham Williams>
 ///
 /// Copyright (c) 2023-2024, Togaware Pty Ltd.
 ///
@@ -166,7 +166,7 @@ class MarkdownTooltip extends StatelessWidget {
         color: bgColor,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black.withValues(alpha: 0.1),
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),
