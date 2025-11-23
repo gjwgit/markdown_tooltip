@@ -1,6 +1,6 @@
 /// A tooltip supporting markdown with a popup delay to avoid clutter of tooltips.
 ///
-// Time-stamp: <Wednesday 2025-03-26 11:41:41 +1100 Graham Williams>
+// Time-stamp: <Sunday 2025-11-23 20:58:19 +1100 Graham Williams>
 ///
 /// Copyright (c) 2023-2024, Togaware Pty Ltd.
 ///
@@ -32,7 +32,7 @@ library;
 
 import 'package:flutter/material.dart';
 
-import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:markdown_tooltip/markdown_tooltip.dart';

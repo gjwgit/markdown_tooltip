@@ -1,6 +1,6 @@
 name: markdown_tooltip
 description: "A tooltip supporting markdown and default delayed popup to avoid clutter."
-version: 0.0.8
+version: 0.0.9
 homepage: https://github.com/gjwgit/markdown_tooltip
 
 environment:
@@ -18,7 +18,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_markdown: ^0.7.7
+  flutter_markdown_plus: ^1.0.5
   url_launcher: ^6.3.1
 
 dev_dependencies:
