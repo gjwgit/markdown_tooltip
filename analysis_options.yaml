@@ -1,28 +1,30 @@
+# Configure the analyzer for static analysis of Dart code.
+#
+# Add the following to pubspec.yaml:
+#
+#   dev_dependencies:
+#     flutter_lints: ^6.0.0
+#
+# Invoke the analyzer from the command line:
+#
+#   flutter analyze
+
+# Activate recommended lints for Flutter apps, packages, and plugins
+# designed to encourage good coding practices.
+
 include: package:flutter_lints/flutter.yaml
 
-# Additional information about this file can be found at
-# https://dart.dev/guides/language/analysis-options
-
 linter:
-
-  # Customise to enable/disable rules in
-  # `package:flutter_lints/flutter.yaml`.
-  #
-  # See https://dart-lang.github.io/linter/lints/index.html.
-  #
-  # A lint rule can be suppressed for a single line of code or a
-  # specific dart file by using the `// ignore: name_of_lint` and `//
-  # ignore_for_file: name_of_lint`
-  
   rules:
     avoid_print: true
-    directives_ordering: false
     prefer_single_quotes: true
     require_trailing_commas: true
-    slash_for_doc_comments: true
-    package_api_docs: true
-    public_member_api_docs: true
-    comment_references: true
-    
-# Additional information about this file can be found at
-# https://dart.dev/guides/language/analysis-options
+    directives_ordering: false
+    prefer_const_constructors: true
+
+# Identify directories to ignore.
+
+analyzer:
+  exclude:
+    - ignore/**
+    - ignore/

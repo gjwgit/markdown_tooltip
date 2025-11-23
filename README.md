@@ -1,5 +1,14 @@
-# Markdown Tooltip
+# A Markdown Tooltip Widget
 
+[![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)](https://flutter.dev)
+[![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
+
+[![GitHub License](https://img.shields.io/github/license/gjwgit/markdown_tooltip)](https://raw.githubusercontent.com/gjwgit/markdown_tooltip/dev/LICENSE)
+[![GitHub Version](https://img.shields.io/badge/dynamic/yaml?url=https://raw.githubusercontent.com/gjwgit/markdown_tooltip/master/pubspec.yaml&query=$.version&label=version&logo=github)](https://github.com/gjwgit/markdown_tooltip/blob/dev/CHANGELOG.md)
+[![Pub Version](https://img.shields.io/pub/v/markdown_toolip?label=pub.dev&labelColor=333940&logo=flutter)](https://pub.dev/packages/markdown_tooltip)
+[![GitHub Last Updated](https://img.shields.io/github/last-commit/gjwgit/markdown_tooltip?label=last%20updated)](https://github.com/gjwgit/markdown_tooltip/commits/dev/)
+[![GitHub Commit Activity (dev)](https://img.shields.io/github/commit-activity/w/gjwgit/markdown_tooltip/dev)](https://github.com/gjwgit/markdown_tooltip/commits/dev/)
+[![GitHub Issues](https://img.shields.io/github/issues/gjwgit/markdown_tooltip)](https://github.com/gjwgit/markdown_tooltip/issues)
 [![Flutter](https://img.shields.io/badge/Made%20with-Flutter-blue.svg)](https://flutter.dev/)
 [![Pub Package](https://img.shields.io/pub/v/markdown_tooltip)](https://pub.dev/packages/markdown_tooltip)
 [![GitHub Issues](https://img.shields.io/github/issues/gjwgit/markdown_tooltip)](https://github.com/gjwgit/markdown_tooltip/issues)
@@ -7,8 +16,8 @@
 
 A drop-in replacement for [Tooltip] supporting Markdown.
 
-Published through the Flutter repository as
-https://pub.dev/packages/markdown_tooltip.
+Published through the Flutter repository
+[pub.dev](https://pub.dev/packages/markdown_tooltip).
 
 ## Features
 
@@ -74,7 +83,7 @@ illustration of some possible markdown markup. To reproduce, simply
 copy the example files then run `flutter create .` followed by
 `flutter run`.
 
-![](assets/images/screenshot_example_app.png)
+![Screenshot of the App](assets/images/screenshot_example_app.png)
 
 The [Rattle](https://github.com/gjwgit/rattleng) app, with its
 front-end written in Flutter, utilises `MarkdownTooltip`s.  In this
@@ -82,9 +91,9 @@ simple example notice the use of bold to highlight the file types that
 are permitted to be loaded into Rattle. Markdown will make bold any
 text between `**` and `**`.
 
-![](assets/images/screenshot_rattle_datset_filename_tooltip.png)
+![Example from Rattle](assets/images/screenshot_rattle_datset_filename_tooltip.png)
 
 Here [HealthPod](https://github.com/anusii/healthpod) demonstrates
 support for dark mode within an app.
 
-![](assets/images/screenshot_healthpod_dark_mode.png)
+![Example from HealthPod](assets/images/screenshot_healthpod_dark_mode.png)
