@@ -1,6 +1,6 @@
-/// <DESCRIPTION>
+/// DESCRIPTION
 ///
-// Time-stamp: <Wednesday 2025-03-26 11:38:09 +1100 Graham Williams>
+// Time-stamp: <Monday 2025-11-24 08:32:35 +1100 Graham Williams>
 ///
 /// Copyright (C) 2025, Togaware Pty Ltd
 ///
@@ -26,6 +26,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 ///
-/// Authors: <AUTHORS>
+/// Authors: AUTHORS
 
 library;
